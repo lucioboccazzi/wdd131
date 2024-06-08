@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="layout.css"/>
+    <link rel="stylesheet" type="text/css" href="styles\layout.css"/>
 </head>
 <body>
     <header>
-        <h1 contenteditable>Header</h1>
+        <h1 contenteditable>Header Content</h1>
     </header>
 
-    <div class="left-sidebar" contenteditable>Left Sidebar</div>
-    <main contenteditable></main>
-    <div class="right-sidebar" contenteditable>Right Sidebar</div>
+    <nav class="navigation modern">
+        <a href="#" title="Home">Home</a>
+        <a href="#" title="About Us">Projects</a>
+        <a href="#" title="Our Partners">Services</a>
+        <a href="#" title="History of Our Organization">Contact Us</a>
+    </nav>
+
+    <div class="grid">
+        <div class="left-sidebar" contenteditable>Main Content</div>
+        <div class="right-sidebar" contenteditable>Aside Content</div>
+    </div>
+
     <footer contenteditable>Footer Content</footer>
-    
+
 </body>
 </html>
