@@ -1,0 +1,39 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+    background: #5630af;
+    padding: 0rem;
+}
+
+nav {
+	margin: 1 auto 2rem;
+    justify-content: space-evenly;
+}
+
+.navigation {
+	list-style: none;
+	display: flex;
+	background-color: #000000;
+	align-items: center;
+}
+
+.navigation li {
+	flex: 1 1 auto;
+}
+
+.navigation a {
+	display: block;
+	color: #eee;
+	padding: 0.75rem;
+	text-decoration: none;
+	text-align: center;
+}
+
+.navigation a:hover {
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-color: yellow;
+}
