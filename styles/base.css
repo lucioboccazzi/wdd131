@@ -4,7 +4,7 @@
 }
 
 header {
-    background: #5630af;
+    background: #6d41d2;
     padding: 0rem;
 }
 
@@ -16,7 +16,7 @@ nav {
 .navigation {
 	list-style: none;
 	display: flex;
-	background-color: #000000;
+	background-color: #21075f;
 	align-items: center;
 }
 
@@ -36,4 +36,71 @@ nav {
 	font-weight: 700;
 	text-decoration: underline;
 	text-decoration-color: yellow;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1000px 200px;
+	margin: 20px;
+	grid-gap: 30px;
+}
+
+.card-left {
+	grid-column: 1 / 3;
+
+}
+
+.card-right {
+	grid-column: 3 / 4;
+}
+
+h2 {
+	background: #6d41d2;
+	padding: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #eee;
+}
+
+h3 {
+	padding: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #000000;
+}
+
+h4 {
+	padding: 0.4rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.about-me {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	margin: 10px;
+}
+
+.my-country {
+	display: grid;
+	grid-template:
+		"a a"
+		"b b";
+	margin: 2px;
+}
+
+p {
+	text-align: left;
+	font-size: 1rem;
+	padding-left: 10px;
+	
+	}
+
+footer {
+    background: #6d41d2;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #eee;
 }
