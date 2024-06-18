@@ -11,8 +11,8 @@ header {
 	padding: 20px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	box-shadow: 0 0 30px #333;
+	color: #ffffff;
 }
-
 
 /* headings */
 h1 {
@@ -31,7 +31,6 @@ h2 {
 main {
 	margin: 2rem;
 	max-width: 1900px;
-
 }
 
 img {
@@ -85,3 +84,30 @@ footer {
     font-size: 1.3rem;
     color: #eee;
 }
+
+/* Mobile Media Query */
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	[class*="col-"] {
+	  width: 100%;
+	}
+
+	/* Menu */
+	#menu {
+		display: block;
+		font-size: 2rem;
+		font-weight:700;
+		text-decoration: none;
+		padding: .5rem .75rem;
+		background-color: #eee;
+		color: #000;
+	}
+	
+	#menu::before {
+		content: "≡";
+	}
+
+	#menu.show::before {
+		content: "X";
+	}
+  }
