@@ -24,6 +24,25 @@ h1 {
 	margin-left: 1rem;
 }
 
+/* main */
+
+
+
+
+/* images - hero */
+
+
+.hero img {
+	width: 50%;
+	height: auto;
+}
+
+.hero img {
+	width: 50%;
+	height: 50%;
+	object-fit: cover;
+}
+
 
 /* footer */
 footer p {
