@@ -28,12 +28,47 @@ h1 {
 main {
 	margin: 1.5rem;
 	text-align: center;
+	gap: 20px;
 	
 }
 
+/* data chart */
+
+.charts {
+	margin: 10px;
+	background-color: #bed4f8;
+}
+
+.charts h1 {
+	background-color: #4161d2;
+}
+
+.data {
+	margin: 10px;
+	display: grid;
+	grid-template-columns: 200px 200px;
+	justify-content: center;
+	gap: 15px;
+}
+
+.bold {
+	text-align: right;
+	font-weight: bold;
+}
+
+.answers {
+	text-align: left;
+}
+
+.weather {
+	margin: 10px;
+	display: grid;
+	grid-template-columns: 200px 200px;
+	justify-content: center;
+	gap: 15px;
+}
 
 /* images - hero */
-
 
 .hero img {
 	width: 50%;
