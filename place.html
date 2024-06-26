@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/place.css">
 
     <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +35,6 @@
                 <img src="images/hero-small.webp" alt="Capibara" width="400">
             </picture>
         </div>
-
 
         <div class="charts">
             <h1>Data</h1>
@@ -75,7 +75,26 @@
                     <p>Wind:</p>
                     <p>Wind Chill:</p>
                 </div>
+
+                <div class="answers">
+                    <p><span id="temperature"></span></p>
+                    <p><span id="conditions"></span></p>
+                    <p><span id="wind"></span></p>
+                    <p id= "output"></p>
+                    
+                </div>
                 
+                <script>
+
+                    document.getElementById('temperature').textContent = temperature;
+                    document.getElementById("conditions").textContent = conditions;
+                    document.getElementById("wind").textContent = wind;
+
+                    var windchill = calculateWindChill(6, 5);
+                    document.getElementById('output').textContent = windchill;
+
+
+                </script>
 
             </div>
         </div>

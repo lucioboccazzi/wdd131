@@ -97,3 +97,12 @@ footer {
     font-size: 1.3rem;
     color: #eee;
 }
+
+/* Mobile Media Query */
+@media only screen and (max-width: 768px) {
+	[class*="col-"] {
+	  width: 100%;
+	}
+
+}
+                                                                          
