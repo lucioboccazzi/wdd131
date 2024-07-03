@@ -9,6 +9,10 @@ hamButton.addEventListener('click', () => {
 	hamButton.classList.toggle('open');
 });
 
+
+
+// temple cards
+
 const temples = [
 	{
 	  templeName: "Aba Nigeria",
@@ -74,7 +78,7 @@ const temples = [
 		dedicated: "1983, April, 20",
 		area: 30659,
 		imageUrl:
-		"https://www.churchofjesuschrist.org/church/news/buenos-aires-argentina-temple-rededicated-under-blue-skies-amid-faithful-members?lang=eng"
+		"https://churchofjesuschristtemples.org/assets/img/temples/buenos-aires-argentina-temple/buenos-aires-argentina-temple-12546.jpg"
 	  },
 
 	  {
@@ -83,7 +87,7 @@ const temples = [
 		dedicated: "2015, October, 30",
 		area: 34369,
 		imageUrl:
-		"https://www.churchofjesuschrist.org/media/image/cordoba-argentina-temples-buildings-b5c1a95?lang=eng"
+		"https://churchofjesuschristtemples.org/assets/img/temples/cordoba-argentina-temple/cordoba-argentina-temple-11093.jpg"
 	  },
 
 	  {
@@ -92,7 +96,39 @@ const temples = [
 		dedicated: "2024",
 		area: 27000,
 		imageUrl:
-		"https://newsroom.churchofjesuschrist.org/article/groundbreaking-date-salta-argentina-temple"
+		"https://churchofjesuschristtemples.org/assets/img/temples/salta-argentina-temple/salta-argentina-temple-48236.jpg"
 	  },
 
   ];
+
+
+
+const templeCards = document.getElementById('templeCards');
+
+temples.forEach(imageObj => {
+    const imgElement = document.createElement('img');
+    imgElement.src = imageObj.imageUrl;
+    imgElement.alt = imageObj.templeName; // Set alt attribute to temple name or another meaningful description
+
+    const templeElement = document.createElement('h1');
+    templeElement.textContent = imageObj.templeName;
+
+    const locationElement = document.createElement('p');
+    locationElement.textContent = `Location: ${imageObj.location}`;
+
+    const dedicationElement = document.createElement('p');
+    dedicationElement.textContent = `Dedicated: ${imageObj.dedicated}`;
+
+    const areaElement = document.createElement('p');
+    areaElement.textContent = `Area: ${imageObj.area} sq ft`; // Display area with units
+
+    const imageContainer = document.createElement('div');
+    imageContainer.classList.add('image-container');
+    imageContainer.appendChild(imgElement);
+    imageContainer.appendChild(templeElement);
+    imageContainer.appendChild(locationElement);
+    imageContainer.appendChild(dedicationElement);
+    imageContainer.appendChild(areaElement);
+
+    templeCards.appendChild(imageContainer);
+});

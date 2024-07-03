@@ -33,17 +33,6 @@ main {
 	max-width: 1900px;
 }
 
-img {
-	max-width: 210px;
-	max-height: 150px;
-}
-
-.container {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-	grid-gap: 25px;
-	place-items: center;
-}
 
 /* navigator */
 nav {
@@ -84,6 +73,24 @@ footer {
     font-size: 1.3rem;
     color: #eee;
 }
+
+/* container from javascript */
+
+.image-container {
+	border: 1px solid #000;
+	border-radius: 8px;
+    padding: 16px;
+	margin-bottom: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+	align-items: center;
+}
+
+.image-container p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
 
 /* Mobile Media Query */
 @media only screen and (max-width: 768px) {
@@ -135,3 +142,4 @@ footer {
 		display: block;
 	}
   }
+
