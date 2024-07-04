@@ -80,10 +80,13 @@ footer {
 	border: 1px solid #000;
 	border-radius: 8px;
     padding: 16px;
-	margin-bottom: 16px;
+	margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
-	align-items: center;
+	width: 300px;
+  	display: inline-block; 
+  	vertical-align: top;
+	
 }
 
 .image-container p {
@@ -91,7 +94,16 @@ footer {
     font-size: 14px;
 }
 
+.image-container img {
+	width: 300px;
+	height: 200px;
+	border-radius: 8px 8px 0 0;
+  }
 
+.templeCards {
+	align-items: center;
+
+}
 /* Mobile Media Query */
 @media only screen and (max-width: 768px) {
 	[class*="col-"] {

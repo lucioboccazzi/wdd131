@@ -108,7 +108,8 @@ const templeCards = document.getElementById('templeCards');
 temples.forEach(imageObj => {
     const imgElement = document.createElement('img');
     imgElement.src = imageObj.imageUrl;
-    imgElement.alt = imageObj.templeName; // Set alt attribute to temple name or another meaningful description
+    imgElement.alt = imageObj.templeName; 
+	imgElement.loading = "lazy";
 
     const templeElement = document.createElement('h1');
     templeElement.textContent = imageObj.templeName;
@@ -120,7 +121,7 @@ temples.forEach(imageObj => {
     dedicationElement.textContent = `Dedicated: ${imageObj.dedicated}`;
 
     const areaElement = document.createElement('p');
-    areaElement.textContent = `Area: ${imageObj.area} sq ft`; // Display area with units
+    areaElement.textContent = `Area: ${imageObj.area} sq ft`; 
 
     const imageContainer = document.createElement('div');
     imageContainer.classList.add('image-container');
