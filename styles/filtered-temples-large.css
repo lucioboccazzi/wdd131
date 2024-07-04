@@ -2,18 +2,34 @@
 	header {
 		display: flex;
 		align-items: center;
-	justify-content: space-between;
+		justify-content: space-between;
 	}
 	
 	nav {
+		display: flex; 
 		justify-content: flex-end;
 		flex-direction: row;
 	}
-	nav a {
-		flex: 1 1 100%;
+	
+	nav ul {
+		list-style-type: none; 
+		margin: 0;
+		padding: 0;
 	}
-
+	
+	nav a {
+		padding: 10px 15px; 
+		text-decoration: none;
+		color: white; 
+		transition: background-color 0.3s ease; 
+	}
+	
+	nav a:hover {
+		background-color: lightgray; 
+	}
+	
 	#menu {
 		display: none;
-	}	
+	}
+	
 }
