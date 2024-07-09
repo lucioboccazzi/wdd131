@@ -1,0 +1,84 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Sofia", sans-serif;
+}
+
+header {
+    background: #6d41d2;
+	display: grid;
+	grid-gap: 1rem;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 30px #333;
+	color: #ffffff;
+}
+
+
+/* star rating section */
+
+.star-rating {
+    display: flex;
+    align-items: left;
+    width: 160px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 10px auto;
+    position: relative;
+  }
+
+  .star-rating input {
+    display: none;
+  }
+
+  .star-rating > label {
+    width: 30px;
+    height: 30px;
+    font-family: Arial;
+    font-size: 30px;
+    transition: 0.2s ease;
+    color: orange;
+  }
+
+  .star-rating label:hover {
+    color: #ff69b4;
+    transition: 0.2s ease;
+  }
+  .star-rating label:active::before {
+    transform:scale(1.1);
+  }
+  
+  .star-rating label::before {
+    content: '\2606';
+    position: absolute;
+    top: 0px;
+    line-height: 26px;
+  }
+ 
+  .star-rating input:checked ~ label:before {
+    content:'\2605';
+  }
+  
+  @-moz-document url-prefix() {
+    .star-rating input:checked ~ label:before {
+    font-size: 36px;
+    line-height: 21px;
+    }
+  }  
+
+
+/* footer */
+footer p {
+	text-align: center;
+	font-size: 1.3rem;
+	padding-right: 20px;
+	align-self: center; 
+}
+
+footer {
+    background: #6d41d2;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #eee;
+}
