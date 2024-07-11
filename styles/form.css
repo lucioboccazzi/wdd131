@@ -131,15 +131,7 @@ input[type="submit"] {
   .star-rating input:checked ~ label:before {
     content:'\2605';
   }
-  
-  @-moz-document url-prefix() {
-    .star-rating input:checked ~ label:before {
-    font-size: 36px;
-    line-height: 21px;
-    }
-  }  
-
-
+   
 /* footer */
 footer p {
 	text-align: center;
@@ -155,3 +147,10 @@ footer {
     font-size: 1.3rem;
     color: #eee;
 }
+
+@-moz-document url-prefix() {
+  .star-rating input:checked ~ label:before {
+  font-size: 36px;
+  line-height: 21px;
+  }
+} 
