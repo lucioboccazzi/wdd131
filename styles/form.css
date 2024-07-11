@@ -148,9 +148,9 @@ footer {
     color: #eee;
 }
 
-@-moz-document url-prefix() {
+@-moz-document {
   .star-rating input:checked ~ label:before {
-  font-size: 36px;
-  line-height: 21px;
+    font-size: 36px;
+    line-height: 21px;
   }
-} 
+}
