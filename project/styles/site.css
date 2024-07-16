@@ -42,9 +42,6 @@ nav {
 	text-decoration-color: #F27405;
 }
 
-main {
-    background-color: #97c4bc;
-}
 
 /* headings */
 h1 {
@@ -72,14 +69,15 @@ main {
 	grid-template-rows: 100px 200px;
 	grid-gap: 20px;
 	max-width: 1900px;
-	
+	background-color: #97c4bc;
+
 }
 
 .charts {
 	display: grid;
 	justify-content: center;
 	align-items: center;
-	padding: 20px;
+	padding: 10px;
 	text-align: center;
 }
 
@@ -129,6 +127,9 @@ main {
 		"a a"
 		"b b";
 	background-color: rgb(222, 221, 221);
+	padding: 10px;
+	max-width: 1200px;
+	margin-left: 300px;
 }
 
 h4 {
@@ -147,14 +148,47 @@ h4 {
 
 
 /* Mobile Media Query */
-@media (max-width: 600px) {
-	.data .weather {
-		grid-template-columns: 1fr 1fr; 
-		width: 100%; 
-	}
-	
-	.weather {
-		grid-template-columns: 0.8fr 1fr 1fr; 
-		width: 100%; 
-	}
+@media only screen and (max-width: 768px) {
+
+    header {
+        font-size: 1.5rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navigation li {
+        flex: none;
+        width: 100%;
+    }
+
+    .navigation a {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .charts h1 {
+        font-size: 1.5rem;
+    }
+
+    .data, .weather {
+        width: auto;
+        float: none;
+    }
+
+    .my-country {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+    }
+
+    .my-country p {
+        padding-left: 10px;
+		font-size: small;
+    }
 }
