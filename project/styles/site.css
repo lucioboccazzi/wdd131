@@ -67,6 +67,14 @@ footer {
 
 /* -------------------- Home section --------------- */
 
+main {
+	display: grid;
+	grid-template-rows: 100px 200px;
+	grid-gap: 20px;
+	max-width: 1900px;
+	
+}
+
 .charts {
 	display: grid;
 	justify-content: center;
@@ -112,6 +120,29 @@ footer {
 
 .answers {
 	text-align: left;
+}
+
+/* -------------------- country info -------------------- */
+.my-country {
+	display: grid;
+	grid-template:
+		"a a"
+		"b b";
+	background-color: rgb(222, 221, 221);
+}
+
+h4 {
+	padding: 0.4rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #000000;
+}
+
+.my-country p {
+	text-align: left;
+	font-size: 1.3rem;
+	padding-left: 20px;
+	align-self: center; 	
 }
 
 
