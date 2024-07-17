@@ -1,3 +1,4 @@
+
 // ------------ Get Dates ------------------
 
 const year = document.querySelector("#year");
@@ -18,6 +19,7 @@ var wind = "5 km/h";
 
 
 // windchill function
+
 function calculateWindChill(temperature, windSpeed) {
 
     const A = 13.12;
@@ -30,11 +32,9 @@ function calculateWindChill(temperature, windSpeed) {
     return windChill;
 }
 
-// Get elements and set content
 document.getElementById('temperature').textContent = temperature;
 document.getElementById("conditions").textContent = conditions;
 document.getElementById("wind").textContent = wind;
 
-// Calculate wind chill and display
 var windchill = calculateWindChill(temperature, windSpeed);
 document.getElementById('output').textContent = windchill;

@@ -1,0 +1,125 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Sofia", sans-serif;
+}
+
+header {
+    background: #014040;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+nav {
+    justify-content: space-evenly;
+}
+
+.navigation {
+	list-style: none;
+	display: flex;
+	background-color: #02735E;
+	align-items: center;
+}
+
+.navigation li {
+	flex: 1 1 auto;
+}
+
+.navigation a {
+	display: block;
+	color: #eee;
+	padding: 0.75rem;
+	text-decoration: none;
+	text-align: center;
+	font-size: 1.3rem;
+}
+
+.navigation a:hover {
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-color: #F27405;
+}
+
+
+/* headings */
+h1 {
+	text-align: center;
+	font-family: times, serif;
+	font-size: 2rem;
+	margin-left: 1rem;
+	padding: 1rem;
+}
+
+/* footer */
+footer {
+    background: #02735E;
+    padding: 1rem;
+    text-align: center;
+    font-size: .8rem;
+    color: #eee;
+}
+
+main {
+	margin: 2rem;
+	max-width: 1900px;
+}
+
+/* -------------------- activity section --------------- */
+
+.activity {
+    border: 1px solid #000;
+	border-radius: 8px;
+    padding: 16px;
+	margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+	width: 300px;
+  	display: inline-block; 
+  	vertical-align: top;
+}
+
+.activity img {
+    width: 300px;
+	height: 200px;
+	border-radius: 8px 8px 0 0;
+}
+
+.activity p {
+	margin: 6px 0;
+    font-size: 14px;
+}
+
+.activity {
+	align-items: center;
+}
+
+
+/* Mobile Media Query */
+@media only screen and (max-width: 768px) {
+
+    header {
+        font-size: 1.5rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navigation li {
+        flex: none;
+        width: 100%;
+    }
+
+    .navigation a {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+}
