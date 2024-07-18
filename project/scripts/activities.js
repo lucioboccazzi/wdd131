@@ -1,5 +1,3 @@
-
-
 // ------ activity cards --------
 
 const activities = [
@@ -68,33 +66,10 @@ const activities = [
     },
 ];
 
-
-// const activitiesContainer = document.getElementById('activitiesContainer');
-
-// activities.forEach(activity => {
-    
-//     const activityDiv = document.createElement('div');
-//     activityDiv.classList.add('activity');
-
-//     const activityContent = `
-//         <h2>${activity.activityName}</h2>
-//         <p><strong>Location:</strong> ${activity.location}</p>
-//         <p><strong>Type:</strong> ${activity.type}</p>
-//         <img src="${activity.imageUrl}" alt="${activity.activityName}">
-//         <p><a href="${activity.websiteLynk}" target="_blank">More Info</a></p>
-//     `;
-
-//     activityDiv.innerHTML = activityContent;
-
-//     activitiesContainer.appendChild(activityDiv);
-// });
-
-
-
 const activitiesContainer = document.getElementById('activitiesContainer');
 
 function renderActivities(filteredActivities) {
-    activitiesContainer.innerHTML = ''; // Clear previous content
+    activitiesContainer.innerHTML = ''; 
 
     filteredActivities.forEach(activity => {
         const activityDiv = document.createElement('div');
@@ -113,10 +88,8 @@ function renderActivities(filteredActivities) {
     });
 }
 
-// Initial rendering of all activities
 renderActivities(activities);
 
-// Event listeners for filter buttons
 const btnAll = document.getElementById('btnAll');
 btnAll.addEventListener('click', () => {
     renderActivities(activities);
