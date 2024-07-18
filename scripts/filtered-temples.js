@@ -88,7 +88,7 @@ const temples = [
   ];
   
 
-  function renderTemples(templesToRender) {
+  function renderActivities(templesToRender) {
 	const templeCards = document.getElementById('templeCards');
 	templeCards.innerHTML = ''; 
   
@@ -125,7 +125,7 @@ const temples = [
   document.addEventListener('DOMContentLoaded', function() {
 	document.getElementById('navHome').addEventListener('click', function(event) {
 	  event.preventDefault();
-	  renderTemples(temples); 
+	  renderActivities(temples); 
 	});
   
 	document.getElementById('navOld').addEventListener('click', function(event) {
@@ -134,7 +134,7 @@ const temples = [
 		const dedicationYear = parseInt(temple.dedicated.split(',')[0]);
 		return dedicationYear < 1900;
 	  });
-	  renderTemples(oldTemples);
+	  renderActivities(oldTemples);
 	});
   
 	document.getElementById('navNew').addEventListener('click', function(event) {
@@ -143,21 +143,21 @@ const temples = [
 		const dedicationYear = parseInt(temple.dedicated.split(',')[0]);
 		return dedicationYear > 2000;
 	  });
-	  renderTemples(newTemples); 
+	  renderActivities(newTemples); 
 	});
   
 	document.getElementById('navLarge').addEventListener('click', function(event) {
 	  event.preventDefault();
 	  const largeTemples = temples.filter(temple => temple.area > 90000);
-	  renderTemples(largeTemples); 
+	  renderActivities(largeTemples); 
 	});
   
 	document.getElementById('navSmall').addEventListener('click', function(event) {
 	  event.preventDefault();
 	  const smallTemples = temples.filter(temple => temple.area < 10000);
-	  renderTemples(smallTemples); 
+	  renderActivities(smallTemples); 
 	});
   
-	renderTemples(temples);
+	renderActivities(temples);
   });
   

@@ -69,23 +69,69 @@ const activities = [
 ];
 
 
+// const activitiesContainer = document.getElementById('activitiesContainer');
+
+// activities.forEach(activity => {
+    
+//     const activityDiv = document.createElement('div');
+//     activityDiv.classList.add('activity');
+
+//     const activityContent = `
+//         <h2>${activity.activityName}</h2>
+//         <p><strong>Location:</strong> ${activity.location}</p>
+//         <p><strong>Type:</strong> ${activity.type}</p>
+//         <img src="${activity.imageUrl}" alt="${activity.activityName}">
+//         <p><a href="${activity.websiteLynk}" target="_blank">More Info</a></p>
+//     `;
+
+//     activityDiv.innerHTML = activityContent;
+
+//     activitiesContainer.appendChild(activityDiv);
+// });
+
+
+
 const activitiesContainer = document.getElementById('activitiesContainer');
 
-activities.forEach(activity => {
-    
-    const activityDiv = document.createElement('div');
-    activityDiv.classList.add('activity');
+function renderActivities(filteredActivities) {
+    activitiesContainer.innerHTML = ''; // Clear previous content
 
-    const activityContent = `
-        <h2>${activity.activityName}</h2>
-        <p><strong>Location:</strong> ${activity.location}</p>
-        <p><strong>Type:</strong> ${activity.type}</p>
-        <img src="${activity.imageUrl}" alt="${activity.activityName}">
-        <p><a href="${activity.websiteLynk}" target="_blank">More Info</a></p>
-    `;
+    filteredActivities.forEach(activity => {
+        const activityDiv = document.createElement('div');
+        activityDiv.classList.add('activity');
 
-    activityDiv.innerHTML = activityContent;
+        const activityContent = `
+            <h2>${activity.activityName}</h2>
+            <p><strong>Location:</strong> ${activity.location}</p>
+            <p><strong>Type:</strong> ${activity.type}</p>
+            <img src="${activity.imageUrl}" alt="${activity.activityName}">
+            <p><a href="${activity.websiteLynk}" target="_blank">More Info</a></p>
+        `;
 
-    activitiesContainer.appendChild(activityDiv);
+        activityDiv.innerHTML = activityContent;
+        activitiesContainer.appendChild(activityDiv);
+    });
+}
+
+// Initial rendering of all activities
+renderActivities(activities);
+
+// Event listeners for filter buttons
+const btnAll = document.getElementById('btnAll');
+btnAll.addEventListener('click', () => {
+    renderActivities(activities);
 });
+
+const btnOutdoors = document.getElementById('btnOutdoors');
+btnOutdoors.addEventListener('click', () => {
+    const filtered = activities.filter(activity => activity.type === 'Outdoors');
+    renderActivities(filtered);
+});
+
+const btnNightLife = document.getElementById('btnNightLife');
+btnNightLife.addEventListener('click', () => {
+    const filtered = activities.filter(activity => activity.type === 'Night Life');
+    renderActivities(filtered);
+});
+
 
