@@ -69,7 +69,7 @@ const activities = [
 const activitiesContainer = document.getElementById('activitiesContainer');
 
 function renderActivities(filteredActivities) {
-    activitiesContainer.innerHTML = ''; 
+    activitiesContainer.innerHTML = '';
 
     filteredActivities.forEach(activity => {
         const activityDiv = document.createElement('div');
@@ -79,13 +79,32 @@ function renderActivities(filteredActivities) {
             <h2>${activity.activityName}</h2>
             <p><strong>Location:</strong> ${activity.location}</p>
             <p><strong>Type:</strong> ${activity.type}</p>
-            <img src="${activity.imageUrl}" alt="${activity.activityName}">
+            <img class="lazy" data-src="${activity.imageUrl}" alt="${activity.activityName}">
             <p><a href="${activity.websiteLynk}" target="_blank">More Info</a></p>
         `;
 
         activityDiv.innerHTML = activityContent;
         activitiesContainer.appendChild(activityDiv);
     });
+
+    const lazyImages = document.querySelectorAll('.lazy');
+
+    const lazyLoad = target => {
+        const io = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    const src = img.getAttribute('data-src');
+                    img.setAttribute('src', src);
+                    observer.disconnect();
+                }
+            });
+        });
+
+        io.observe(target);
+    };
+
+    lazyImages.forEach(lazyLoad);
 }
 
 renderActivities(activities);
@@ -98,12 +117,6 @@ btnAll.addEventListener('click', () => {
 const btnOutdoors = document.getElementById('btnOutdoors');
 btnOutdoors.addEventListener('click', () => {
     const filtered = activities.filter(activity => activity.type === 'Outdoors');
-    renderActivities(filtered);
-});
-
-const btnNightLife = document.getElementById('btnNightLife');
-btnNightLife.addEventListener('click', () => {
-    const filtered = activities.filter(activity => activity.type === 'Night Life');
     renderActivities(filtered);
 });
 
