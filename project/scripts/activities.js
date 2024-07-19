@@ -109,15 +109,21 @@ function renderActivities(filteredActivities) {
 
 renderActivities(activities);
 
-const btnAll = document.getElementById('btnAll');
-btnAll.addEventListener('click', () => {
-    renderActivities(activities);
+const btnNightLife = document.getElementById('btnNightLife');
+btnNightLife.addEventListener('click', () => {
+    const filtered = activities.filter(activity => activity.type === 'Night Life');
+    renderActivities(filtered);
 });
 
 const btnOutdoors = document.getElementById('btnOutdoors');
 btnOutdoors.addEventListener('click', () => {
     const filtered = activities.filter(activity => activity.type === 'Outdoors');
     renderActivities(filtered);
+});
+
+const btnAll = document.getElementById('btnAll');
+btnAll.addEventListener('click', () => {
+    renderActivities(activities);
 });
 
 
